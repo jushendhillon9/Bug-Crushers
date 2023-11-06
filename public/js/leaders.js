@@ -52,32 +52,26 @@ const filterRankings = async () => {
 
 
             rankCell.text(allUsers[i].rank + "th");
-            rankCell.css({
-            "font-size":"30px"
-            });
             
             if (allUsers[i].rank === 1) {
                 rankCell.text("");
                 let topThreeMedals = $("<img>");
                 topThreeMedals.attr("src", "./images/1stPlace.png");
-                topThreeMedals.attr("width", "45px");
-                topThreeMedals.attr("height", "45px");
+                topThreeMedals.attr("id", "placeImage");
                 rankCell.append(topThreeMedals);
             }
             if (allUsers[i].rank === 2) {
                 rankCell.text("");
                 let topThreeMedals = $("<img>");
                 topThreeMedals.attr("src", "./images/2ndPlace.png");
-                topThreeMedals.attr("width", "45px");
-                topThreeMedals.attr("height", "45px");
+                topThreeMedals.attr("id", "placeImage");
                 rankCell.append(topThreeMedals);
             }
             if (allUsers[i].rank === 3) {
                 rankCell.text("");
                 let topThreeMedals = $("<img>");
                 topThreeMedals.attr("src", "./images/3rdPlace.png");
-                topThreeMedals.attr("width", "45px");
-                topThreeMedals.attr("height", "45px");
+                topThreeMedals.attr("id", "placeImage");
                 rankCell.append(topThreeMedals);
             }
 
@@ -88,15 +82,14 @@ const filterRankings = async () => {
             newRow.append(nameCell);
 
             let stepCountCell = $("<td>");
+            stepCountCell.attr("id", "leadersSteps");
             stepCountCell.text(allUsers[i].totalSteps.toLocaleString());
 
             let stepsImage = $("<img>");
             stepsImage.attr("src", "/images/footsteps.png");
-            stepsImage.attr("width", "30px");
-            stepsImage.attr("height", "30px");
-            stepsImage.css("margin-right", "30px");
-            
+            stepsImage.attr("id", "steps");
             stepCountCell.append(stepsImage);
+
             newRow.append(stepCountCell);
 
             tableBody.append(newRow);
@@ -140,9 +133,7 @@ const displayResults = (matchingUsers) => {
             rankCell.text(user.rank + "th");
         }
 
-        rankCell.css({
-            "font-size":"30px"
-        });
+        rankCell.addClass("rankNumber");
 
         newRow.append(rankCell);
 
@@ -151,13 +142,12 @@ const displayResults = (matchingUsers) => {
         newRow.append(nameCell);
 
         let stepCountCell = $("<td>");
+        stepCountCell.attr("id", "leadersSteps");
         stepCountCell.text(user.totalSteps.toLocaleString());
 
         let stepsImage = $("<img>");
         stepsImage.attr("src", "/images/footsteps.png");
-        stepsImage.attr("width", "30px");
-        stepsImage.attr("height", "30px");
-        stepsImage.css("margin-right", "30px");
+        stepsImage.attr("id", "steps");
         stepCountCell.append(stepsImage);
 
         newRow.append(stepCountCell);

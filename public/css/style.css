@@ -400,9 +400,8 @@ td div {
   text-align: center;
 }
 
-
-#rankings tr td:nth-child(1) {
-  font-size: 40px;
+.rankNumber {
+  font-size: 20px;
 }
 
 #rankings tr td:nth-child(3) {
@@ -883,32 +882,31 @@ font-size: 20px;
     color: #f69620;
   }
 
-  #usernameRegister {
+  #usernameRegisterContainer {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: flex-start;
-    width: 100%;
+    justify-content: flex-end;
     margin-top: 70px;
   }
 
   #usernameRegisterHeader {
     font-size: 50px;
-    margin-right: 50px;
-    margin-left: 90px;
+  }
+
+  #registrationLeft {
+    margin-right: 30px;
   }
 
   #usernameRegisterField {
     background-color: transparent;
-    width: 100%;
-    margin-right: 90px;
+    width: 500px;
     font-size: 50px;
     color: white;
     padding: 5px;
-    padding-left: 10px; 
+    margin-right: 100px;
   }
 
   #usernameRegisterMaxLength {
-    margin-left: 90px;
     color: white;
   }
 
@@ -1112,27 +1110,31 @@ font-size: 20px;
     #challengeOneFooter, #challengeTwoFooter, #challengeThreeFooter {
       font-size: 20px;
     }
+    #usernameRegisterContainer {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+      margin-top: 70px;
+    }
+  
     #usernameRegisterHeader {
-      font-size: 30px;
+      font-size: 50px;
     }
-    #usernameRegisterMaxLength {
-      font-size: 15px;
-      position: relative;
-      bottom: 30px;
+  
+    #registrationLeft {
+      margin-right: 30px;
     }
-    #registerButton {
-      width: 140px;
-      height: 35px;
-      font-size: 15px;
-    }
+  
     #usernameRegisterField {
       background-color: transparent;
-      width: 100%;
-      margin-right: 90px;
+      width: 400px;
       font-size: 50px;
       color: white;
       padding: 5px;
-      padding-left: 10px;
+      margin-right: 50px;
+    }
+    #registerButtonContainer {
+      margin-left: 50px;
     }
   }
 
@@ -1165,26 +1167,36 @@ font-size: 20px;
     #usernameRegisterHeader {
       font-size: 30px;
     }
-    #usernameRegisterMaxLength {
-      font-size: 12px;
-      bottom: 0px;
-      right: 
+    #usernameRegisterContainer {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+      margin-top: 70px;
     }
-    #registerButton {
-      width: 140px;
-      height: 35px;
-      font-size: 15px;
-    }
-    #usernameRegisterField {
-      position: relative;
-      top: 5px;
-      right: 30px;
-      padding: 2px;
+  
+    #registrationLeft {
       font-size: 20px;
+    }
+    #usernameRegisterMaxLength {
+      font-size: 10px;
+    }
+  
+    #usernameRegisterField {
+      background-color: transparent;
       width: 250px;
+      height: 45px;
+      font-size: 50px;
+      color: white;
+      padding: 5px;
+      margin-right: 50px;
     }
     #registerButtonContainer {
-      margin-left: 70px;
+      margin-left: 50px;
+    }
+    #registerButton {
+      font-size: 15px;
+      height: 40px;
+      width: 140px;
     }
   }
 
@@ -1394,9 +1406,6 @@ font-size: 20px;
     #rankings tr td:nth-child(2) {
       font-size: 12px !important;
     }
-    #rankings tr td:nth-child(3) {
-      font-size: 12px !important;
-    }
     #rankings tr td {
       padding: 15px;
     }
@@ -1576,8 +1585,8 @@ font-size: 20px;
       font-size: 15px !important;
     }
     #steps {
-      width: 15px;
-      height: 15px;
+      width: 20px;
+      height: 20px;
     }
     #friendsHeader {
       position: relative;
@@ -1767,35 +1776,26 @@ font-size: 20px;
       font-size: 15px;
     }
     #usernameRegisterHeader {
-      font-size: 20px;
-      margin-right: 20px;
-      position: relative;
-      right: 50px;
-      top: 5px;
+      font-size: 14px;
+    }
+    #registrationLeft {
+      font-size: 7px;
     }
     #usernameRegisterMaxLength {
-      font-size: 9px;
-      position: relative;
-      bottom: 12px;
-      right: 50px;
+      font-size: 8px !important;
     }
-    #registerButton {
-      width: 120px;
-      height: 25px;
-      font-size: 12px;
-      margin-right: 120px;
-    }
+  
     #usernameRegisterField {
-      margin-right: 30px;
-      padding: 2px;
-      padding-left: 7px;
       width: 200px;
-      height: 40px;
-      position: relative;
-      right: 40px;
+      height: 25px;
     }
     #registerButtonContainer {
-      margin-left: 70px;
+      margin-left: 50px;
+    }
+    #registerButton {
+      font-size: 10px;
+      height: 30px;
+      width: 100px;
     }
   }
 
@@ -1818,5 +1818,28 @@ font-size: 20px;
     }
     #userProfile {
       margin-bottom: -70px;
+    }
+    #usernameRegisterHeader {
+      font-size: 16px;
+    }
+    #registrationLeft {
+      font-size: 7px;
+      width: 50px;
+      position: relative;
+      top: 3px;
+      right: 3px;
+    }
+    #usernameRegisterMaxLength {
+      font-size: 8px !important;
+    }
+    #registerButtonContainer {
+      position: relative;
+      right: 10px;
+      bottom: 15px;
+    }
+    #registerButton {
+      font-size: 10px;
+      height: 35px;
+      width: 80px;
     }
   }
