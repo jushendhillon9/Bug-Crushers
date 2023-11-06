@@ -29,6 +29,7 @@ submitDailyStepsButton.on("click", async (event) => {
         }
     })
     let data = await response.json();
+    location.reload(true);
 })
 
 checkPastStepsButton.on("click", async (event) => {
