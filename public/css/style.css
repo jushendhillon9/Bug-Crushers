@@ -904,7 +904,7 @@ font-size: 20px;
     font-size: 50px;
     color: white;
     padding: 5px;
-    padding-left: 10px;
+    padding-left: 10px; 
   }
 
   #usernameRegisterMaxLength {
@@ -1167,8 +1167,6 @@ font-size: 20px;
     }
     #usernameRegisterMaxLength {
       font-size: 15px;
-      position: relative;
-      bottom: 30px;
     }
     #registerButton {
       width: 140px;
@@ -1179,6 +1177,7 @@ font-size: 20px;
       margin-right: 30px;
       padding: 2px;
       padding-left: 7px;
+      font-size: 20px;
     }
     #registerButtonContainer {
       margin-left: 70px;
@@ -1408,6 +1407,7 @@ font-size: 20px;
   @media screen and (max-width: 580px) {
     #usernameHeader {
       font-size: 40px;
+      text-align: center;
     }
     #challengeHeader {
       font-size: 30px;
@@ -1557,6 +1557,11 @@ font-size: 20px;
     #steps {
       width: 15px;
       height: 15px;
+    }
+    #friendsHeader {
+      position: relative;
+      bottom: 180px;
+      font-size: 30px !important;
     }
     #challengeImage {
       height: 188px;
@@ -1788,5 +1793,8 @@ font-size: 20px;
     }
     footer {
       margin-top: 30px;
+    }
+    #userProfile {
+      margin-bottom: -70px;
     }
   }
