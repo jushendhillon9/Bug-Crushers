@@ -1166,7 +1166,9 @@ font-size: 20px;
       font-size: 30px;
     }
     #usernameRegisterMaxLength {
-      font-size: 15px;
+      font-size: 12px;
+      bottom: 0px;
+      right: 
     }
     #registerButton {
       width: 140px;
