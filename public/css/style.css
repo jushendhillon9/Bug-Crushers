@@ -1185,7 +1185,6 @@ font-size: 20px;
       background-color: transparent;
       width: 250px;
       height: 45px;
-      font-size: 50px;
       color: white;
       padding: 5px;
       margin-right: 50px;
@@ -1211,6 +1210,9 @@ font-size: 20px;
     #menuitems {
       width: 150px;
       font-size: 18px;
+    }
+    #usernameRegisterField {
+      font-size: 30px;
     }
   }
 
@@ -1365,6 +1367,9 @@ font-size: 20px;
     form .form-input {
       padding: 0rem;
     }
+    #usernameRegisterField {
+      font-size: 25px;
+    }
   }
 
   @media screen and (max-width: 580px){
@@ -1427,6 +1432,9 @@ font-size: 20px;
     }
     #signoutButton {
       margin-top: 10px;
+    }
+    #usernameRegisterField {
+      font-size: 20px;
     }
   }
   @media screen and (max-width: 580px) {
@@ -1797,6 +1805,9 @@ font-size: 20px;
       height: 30px;
       width: 100px;
     }
+    #usernameRegisterField {
+      font-size: 12px;
+    }
   }
 
   @media screen and (max-width: 375px) {
@@ -1841,5 +1852,8 @@ font-size: 20px;
       font-size: 10px;
       height: 35px;
       width: 80px;
+    }
+    #usernameRegisterField {
+      font-size: 17px;
     }
   }
