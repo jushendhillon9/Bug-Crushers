@@ -1351,7 +1351,7 @@ font-size: 20px;
     }
   }
 
-  @media screen and (max-width: 590px){
+  @media screen and (max-width: 580px){
     #takeSomeSteps {
       font-size: 1rem;
     }
@@ -1402,6 +1402,18 @@ font-size: 20px;
     }
     #leaderboard {
       padding-right: -180px;
+    }
+    #loginCard {
+      margin-top: -20px;
+    }
+    #signupCard {
+      margin-bottom: -20px;
+    }
+    #loginButton {
+      margin-top: 10px;
+    }
+    #signoutButton {
+      margin-top: 10px;
     }
   }
   @media screen and (max-width: 580px) {
