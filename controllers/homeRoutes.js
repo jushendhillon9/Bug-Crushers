@@ -135,6 +135,7 @@ router.get("/leaders", async (req, res) => {
           if (thisMonth == stepEntryDate) {
             totalSteps += stepEntry.steps_for_day;
           }
+          console.log(stepEntryDate);
           leader.totalSteps = totalSteps;
         }
       }
@@ -150,7 +151,6 @@ router.get("/leaders", async (req, res) => {
       leaders[0].numberOne = true;
       leaders[1].numberTwo = true;
       leaders[2].numberThree = true;
-      console.log(leaders)
       res.render("leaders", {loggedInFeatures, logoutButtonVisible, leaders});
       }
     catch (err) {
@@ -213,10 +213,10 @@ router.get("/profile/:userid", async (req, res) => {
     if (stepData.length != 0) { //if there is no stepData, then the "steps to reach goal" and "Step Total" will be empty
       //this will be the todayStepCount value
       for (const stepEntry of stepData) {
+        let thisMonthTwo = dayjs().format("MM/YYYY");
         let dateCreated = stepEntry.date;
-        let thisMonth = dayjs().format("MM/YYYY");
         let dateFormatted = dayjs.unix(dateCreated).format("MM/YYYY");
-        if (thisMonth == dateFormatted) {
+        if (thisMonthTwo == dateFormatted) {
           totalStepsThisMonth += stepEntry.steps_for_day;
         }
       }
@@ -288,6 +288,7 @@ router.get("/profile/:userid", async (req, res) => {
       fullName = profile[0].UserProfile.full_name;
       bio = profile[0].UserProfile.bio;
       current_steps = profile[0].UserProfile.current_steps;
+      console.log(profile[0].UserProfile);
       userBackgroundColor = profile[0].UserProfile.user_background_color;
       parseInt(current_steps);
       current_steps= current_steps.toLocaleString();
@@ -423,7 +424,6 @@ router.put("/profile/:userid", async (req, res) => {
   const userid = req.params.userid;
   //first need to update the 
   try {
-    console.log(req.body.user_background_color);
     await UserProfile.update(
       {
         full_name: req.body.full_name,
