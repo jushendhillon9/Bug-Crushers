@@ -6,7 +6,7 @@ const userprofiledata = [
         bio: "Hey. I am Josh Jacobs and I love to walk.",
         profile_picture: "",
         challenge: "challenge one",
-        step_count: 102000,
+        step_count: 45000,
         user_id: 1
     },
     {
@@ -14,7 +14,7 @@ const userprofiledata = [
         bio: "Yo! I'm Samantha Lee, stepping up my game and stepping towards a healthier version of me. Let's motivate each other! 🏃‍♀️ #StepChallengeAccepted",
         profile_picture: "",
         challenge: "challenge two",
-        step_count: 85900,
+        step_count: 35000,
         user_id: 2
     },
     {
@@ -22,7 +22,7 @@ const userprofiledata = [
         bio: "Greetings! I'm Michael Chen, on a mission to conquer step goals. Striding towards a healthier me, one step at a time. Join my journey! 🌟 #StepWarrior",
         profile_picture: "",
         challenge: "challenge two",
-        step_count: 45600,
+        step_count: 35000,
         user_id: 3
     },
     {
@@ -30,7 +30,7 @@ const userprofiledata = [
         bio: "Hi, it's Nolan Archer, stepping into a new chapter of fitness. Embracing the challenge and counting steps like there's no tomorrow! 👟 #StepIntoGreatness",
         profile_picture: "",
         challenge: "challenge two",
-        step_count: 32780,
+        step_count: 35000,
         user_id: 4
     },
     {
@@ -38,7 +38,7 @@ const userprofiledata = [
         bio:  "What's up? I'm John Skywalker, stepping into a world of wellness. Let's make every step count and crush our fitness goals! 💪 #StepStrong",
         profile_picture: "",
         challenge: "challenge one",
-        step_count: 38900,
+        step_count: 45000,
         user_id: 5
     },
     {
@@ -46,7 +46,7 @@ const userprofiledata = [
         bio: "Salutations! I'm Ava Green, chasing steps and chasing dreams. Join me in this fitness adventure! Together, we can step into a better future. 🌈 #StepDreams",
         profile_picture: "",
         challenge: "challenge three",
-        step_count: 19280,
+        step_count: 24000,
         user_id: 6
     },
     {
@@ -54,7 +54,7 @@ const userprofiledata = [
         bio: "Hi there! I'm Amanda Miller, embracing the rhythm of life one step at a time. Let's dance through this step challenge together! 💃 #StepDancer",
         profile_picture: "",
         challenge: "challenge two",
-        step_count: 47590,
+        step_count: 35000,
         user_id: 7
     },
     {
@@ -62,7 +62,7 @@ const userprofiledata = [
         bio: "Yo, I'm Ian Walking, turning pavement into my personal gym. Step by step, I'm sculpting a stronger me. Join the fitness party! 💪 #StepSculptor",
         profile_picture: "",
         challenge: "challenge one",
-        step_count: 120000,
+        step_count: 45000,
         user_id: 8
     },
     {
@@ -70,7 +70,7 @@ const userprofiledata = [
         bio: "Hello, I'm Isabella Everly, strolling through the journey of self-discovery. Every step is a revelation. Come walk with me! 🚶‍♀️ #StepReveler",
         profile_picture: "",
         challenge: "challenge three",
-        step_count: 58540,
+        step_count: 24000,
         user_id: 9
     },
     {
@@ -78,7 +78,7 @@ const userprofiledata = [
         bio: "Hello, I'm Jasper Cruz, navigating the labyrinth of wellness. Join my squad, and let's conquer the challenges together! 🗺️ #StepNavigator",
         profile_picture: "",
         challenge: "challenge three",
-        step_count: 47900,
+        step_count: 24000,
         user_id: 10
     },
     {
@@ -86,7 +86,7 @@ const userprofiledata = [
         bio: "Hey, it's Nova Emberlyn, stepping into a world of positivity. Join my tribe, and let's radiate good vibes with every stride! 😊 #StepOptimist",
         profile_picture: "",
         challenge: "challenge two",
-        step_count: 22000,
+        step_count: 35000,
         user_id: 11
     },
     {
@@ -94,7 +94,7 @@ const userprofiledata = [
         bio: "Hey! I am Willow Quinn and I love to walk.",
         profile_picture: "",
         challenge: "challenge one",
-        step_count: 29000,
+        step_count: 45000,
         user_id: 12
     },
     {
@@ -102,7 +102,7 @@ const userprofiledata = [
         bio: "Hey, I'm Milo Sterling, journeying through the landscapes of fitness. Every step is a brushstroke on the canvas of well-being. Join me in this masterpiece! 🎨 #StepArtist",
         profile_picture: "",
         challenge: "challenge three",
-        step_count: 13430,
+        step_count: 24000,
         user_id: 13
     },
     {
@@ -110,7 +110,7 @@ const userprofiledata = [
         bio: "Greetings, I'm Silas Orion, trekking through the terrain of fitness. Every step is a victory, and I'm building an empire of well-being. Join my kingdom! 👑 #StepConqueror",
         profile_picture: "",
         challenge: "challenge one",
-        step_count: 83000,
+        step_count: 45000,
         user_id: 14
     },
     {
@@ -118,7 +118,7 @@ const userprofiledata = [
         bio: "Hey there, it's Dwyane Johnson, scripting a tale of strength and vitality. Join my story, and let's write a bestseller of well-being! 📚 #StepAuthor",
         profile_picture: "",
         challenge: "challenge one",
-        step_count: 100000,
+        step_count: 45000,
         user_id: 15
     },
     {
@@ -126,7 +126,7 @@ const userprofiledata = [
         bio: "Hi, I'm Gavin Bennett, navigating the waves of wellness. Join my crew, and let's set sail towards a sea of good health! ⛵ #StepNavigator",
         profile_picture: "",
         challenge: "challenge three",
-        step_count: 27000,
+        step_count: 24000,
         user_id: 16
     },
     {
@@ -134,7 +134,7 @@ const userprofiledata = [
         bio: "Greetings, I'm Leo Everest, marching to the beat of wellness. Join my parade, and let's celebrate the rhythm of a healthier life! 🥁 #StepMarcher",
         profile_picture: "",
         challenge: "challenge two",
-        step_count: 90985,
+        step_count: 35000,
         user_id: 17
     },
     {
@@ -142,7 +142,7 @@ const userprofiledata = [
         bio: "Hello, I'm Finnian Ash, wandering through the landscapes of fitness. Join my journey and let's explore the trails of well-being together! 🌳 Explorer of a healthier life.",
         profile_picture: "",
         challenge: "challenge two",
-        step_count: 88040,
+        step_count: 35000,
         user_id: 18
     },
     {
@@ -150,7 +150,7 @@ const userprofiledata = [
         bio: "Hey, it's Harper Wren, striding through the symphony of fitness. Join my orchestra and let's compose a melody of well-being together! 🎻 Composer of a healthier life.",
         profile_picture: "",
         challenge: "challenge three",
-        step_count: 33000,
+        step_count: 24000,
         user_id: 19
     },
     {
@@ -158,7 +158,7 @@ const userprofiledata = [
         bio: "What's up? I'm Mason Walker, building the fortress of fitness brick by brick. Join my construction crew, and let's erect a stronghold of health! 🏰 #StepBuilder",
         profile_picture: "",
         challenge: "challenge one",
-        step_count: 95430,
+        step_count: 45000,
         user_id: 20
     },
     {
@@ -166,7 +166,7 @@ const userprofiledata = [
         bio: "Hey! I am Michael Simpson and I love to walk.",
         profile_picture: "",
         challenge: "challenge two",
-        step_count: 55000,
+        step_count: 35000,
         user_id: 21
     },
     {
@@ -174,7 +174,7 @@ const userprofiledata = [
         bio: "Hey! I am Jeremy Piven. I have always love to walk and will continue to do so for good health. Let's keep walking!",
         profile_picture: "",
         challenge: "challenge three",
-        step_count: 27000,
+        step_count: 24000,
         user_id: 22
     },
     {
@@ -182,7 +182,7 @@ const userprofiledata = [
         bio: "What's up? I'm Ricky Bobby, stepping into a world of possibilities. Striving for success, one step at a time. Join me on this epic journey! 🌐 #StepSeeker",
         profile_picture: "",
         challenge: "challenge three",
-        step_count: 48000,
+        step_count: 24000,
         user_id: 23
     },
     {
@@ -190,7 +190,7 @@ const userprofiledata = [
         profile_picture: "",
         bio: "Hey! Clark Williams here, and I love to walk more than anything else. It keeps my mind clear and is the best way to recenter yourself. Walking is the best!",
         challenge: "challenge one",
-        step_count: 84058,
+        step_count: 45000,
         user_id: 24
     },
     {
@@ -198,7 +198,7 @@ const userprofiledata = [
         bio: "What's up, I am Nathaniel Tabeeo... I have been walking for forever. It's the best way to exercise!",
         profile_picture: "",
         challenge: "challenge two",
-        step_count: 57490,
+        step_count: 35000,
         user_id: 25
     }
 ];
