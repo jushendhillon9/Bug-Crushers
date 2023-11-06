@@ -1176,10 +1176,12 @@ font-size: 20px;
       font-size: 15px;
     }
     #usernameRegisterField {
-      margin-right: 30px;
+      position: relative;
+      top: 5px;
+      right: 30px;
       padding: 2px;
-      padding-left: 7px;
       font-size: 20px;
+      width: 250px;
     }
     #registerButtonContainer {
       margin-left: 70px;
@@ -1499,6 +1501,11 @@ font-size: 20px;
   }
 
   @media screen and (max-width: 415px){
+    html, body {
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
     #challengeHeader {
       margin-top: -20px;
     }
@@ -1764,11 +1771,12 @@ font-size: 20px;
       margin-right: 20px;
       position: relative;
       right: 50px;
+      top: 5px;
     }
     #usernameRegisterMaxLength {
       font-size: 9px;
       position: relative;
-      bottom: 15px;
+      bottom: 12px;
       right: 50px;
     }
     #registerButton {
