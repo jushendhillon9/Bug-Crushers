@@ -1024,7 +1024,7 @@ font-size: 20px;
 
   @keyframes anim {
     100%{
-      stroke-dashoffset: 0;
+      stroke-dashoffset: 1030;
     }
   }
 
