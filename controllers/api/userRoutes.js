@@ -373,7 +373,7 @@ router.post("/acceptFriend", async (req,res) => {
       }
     )
     let currentURL = "/profile/" + req.session.user_id;
-    res.redirect(currentURL);
+    res.json(currentURL);
   }
   catch (err) {
     console.log(err);
@@ -404,7 +404,6 @@ router.delete("/declineFriend", async (req,res) => {
     )
     let currentURL = "/profile/" + req.session.user_id;
     res.json(currentURL);
-    console.log("hello");
   }
   catch(err) {
     console.log(err);
