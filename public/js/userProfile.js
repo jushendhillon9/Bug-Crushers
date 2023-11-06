@@ -318,7 +318,6 @@ let circleRadius = () => {
     if ($(window).width() < 415) {
         if (countTwo == 0) {
             circle.attr("r", Math.max(1, 104));
-            console.log("hello");
             countTwo=1;
         }
     }

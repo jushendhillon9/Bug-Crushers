@@ -15,11 +15,12 @@ const loginFormHandler = async (event) => {
       console.log('Response from server:', data);
 
       if (data.user) {
-        alert('Successful login.'); //THIS IS WORKING
+        alert('Successful login.');
         window.location.href = "/";
       } else {
         console.error('Failed to log in:', data.message);
         alert('Failed to log in.');
+        location.reload(true);
       }
     } catch (error) {
       console.error('Error during fetch:', error);
@@ -44,8 +45,9 @@ const signupFormHandler = async (event) => {
     const data = await response.json();
 
     console.log(data);
-    
+
     if (response.ok) {
+      console.log('hello');
       window.location.pathname = "/register";
     } 
     else {
