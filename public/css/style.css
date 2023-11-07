@@ -641,6 +641,12 @@ font-size: 20px;
     color: white;
   }
 
+  .currentStepTotalContainer {
+    position: relative;
+    top:19px;
+    right: 7px;
+  }
+
   #currentStepTotalContainer2 {
     position: relative;
     top:19px;
@@ -933,11 +939,15 @@ font-size: 20px;
     font-size: 50px;
     color: white;
     padding: 5px;
-    margin-right: 100px;
+    margin-right: 110px;
   }
 
   #usernameRegisterMaxLength {
     color: white;
+  }
+
+  #pastSteps {
+    margin-right: 107px;
   }
 
   #registerButtonContainer {
@@ -1605,6 +1615,15 @@ font-size: 20px;
       right: 50px;
       left: -2px;
     }
+    #pastSteps {
+      margin-right: 110px;
+    }
+    #datePickerContainer2 {
+      width: 250px;
+    }
+    #userStepCountContainer2 {
+      width: 350px;
+    }
   }
 
   @media screen and (max-width: 425px){
@@ -2158,9 +2177,5 @@ font-size: 20px;
       margin-left: -10px;
       right: 10px;
       left: 0px;
-    }
-    #pastSteps {
-      font-size: 14px;
-      margin-right: -9px;
     }
   }
