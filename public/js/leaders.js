@@ -25,6 +25,7 @@ const loadAllUsers = async () => {
     )
     .then((data) => {
         allUsers = data;
+        console.log(allUsers);
     });
 
 }
@@ -46,33 +47,65 @@ const filterRankings = async () => {
             
         }
         for (let i = 0; i < 10; i++) {
-            let newRow = $("<tr>").attr("onclick", "window.location.href='profile/" + allUsers[i].id + "';");
+            let newRow = $("<tr>").attr("onclick", "window.location.href='profile/" + allUsers[i].id + "';"); 
+
 
             let rankCell = $("<td>");
 
+            let rankCellDiv = $("<div>");
+            rankCellDiv.attr("id", "leadersRankDiv");
 
-            rankCell.text(allUsers[i].rank + "th");
+            let rankCellInnerDiv = $("<div>");
+            rankCellInnerDiv.attr("id", "leadersRank");
+
+            rankCellInnerDiv.text(allUsers[i].rank + "th");
+            rankCellDiv.append(rankCellInnerDiv);
+            rankCell.append(rankCellDiv);
+            newRow.append(rankCell);
+
+            let topThreeMedalsDiv = $("<div>");
+            if ($(window).width() < 415) {
+                topThreeMedalsDiv.addClass("placePositioning");
+            }
             
             if (allUsers[i].rank === 1) {
                 rankCell.text("");
                 let topThreeMedals = $("<img>");
+                let topThreeMedalsDiv = $("<div>");
+                if ($(window).width() < 415) {
+                    topThreeMedalsDiv.addClass("placePositioning");
+                    
+                }
                 topThreeMedals.attr("src", "./images/1stPlace.png");
                 topThreeMedals.attr("id", "placeImage");
-                rankCell.append(topThreeMedals);
+                topThreeMedalsDiv.append(topThreeMedals);
+                rankCell.append(topThreeMedalsDiv);
             }
             if (allUsers[i].rank === 2) {
                 rankCell.text("");
                 let topThreeMedals = $("<img>");
+                let topThreeMedalsDiv = $("<div>");
+                if ($(window).width() < 415) {
+                    topThreeMedalsDiv.addClass("placePositioning");
+                    
+                }
                 topThreeMedals.attr("src", "./images/2ndPlace.png");
                 topThreeMedals.attr("id", "placeImage");
-                rankCell.append(topThreeMedals);
+                topThreeMedalsDiv.append(topThreeMedals);
+                rankCell.append(topThreeMedalsDiv);
             }
             if (allUsers[i].rank === 3) {
                 rankCell.text("");
                 let topThreeMedals = $("<img>");
+                let topThreeMedalsDiv = $("<div>");
+                if ($(window).width() < 415) {
+                    topThreeMedalsDiv.addClass("placePositioning");
+                    
+                }
                 topThreeMedals.attr("src", "./images/3rdPlace.png");
                 topThreeMedals.attr("id", "placeImage");
-                rankCell.append(topThreeMedals);
+                topThreeMedalsDiv.append(topThreeMedals);
+                rankCell.append(topThreeMedalsDiv);
             }
 
             newRow.append(rankCell);
@@ -96,7 +129,13 @@ const filterRankings = async () => {
         }
     }
     else {
+        console.log(searchTerm);
+        allUsers.forEach((user) => {
+            let username = user.username.toLowerCase();
+            user.username = username;
+        })
         let matchingUsers = allUsers.filter((thisUser) => thisUser.username.indexOf(searchTerm) == 0);
+        console.log(matchingUsers);
         //if it does equal 0, then the string matches so far and will be added
         displayResults(matchingUsers);
     }
@@ -113,25 +152,43 @@ const displayResults = (matchingUsers) => {
     }
 
     matchingUsers.forEach((user) => {
-        let newRow = $("<tr>").attr("onclick", "window.location.href='profile/" + user.id + "';");
+        console.log(user);
+let newRow = $("<tr>").attr("onclick", "window.location.href='profile/" + user.id + "';");
+let rankCell = $("<td>");
 
-        let rankCell = $("<td>");
+let lastTwoDigits = user.rank % 100; // Get the last two digits of the rank
 
-        let rankString = user.rank.toString();
-        let rankLength = rankString.length;
-        let lastNumber = rankString.substring(rankLength-1);
-        if (user.rank > 20 && lastNumber == 1) {
-            rankCell.text(user.rank + "st");
-        }
-        else if (user.rank > 20 && lastNumber == 2) {
-            rankCell.text(user.rank + "nd");
-        }
-        else if (user.rank > 20 && lastNumber == 3) {
-            rankCell.text(user.rank + "rd");
-        }
-        else {
-            rankCell.text(user.rank + "th");
-        }
+if (lastTwoDigits >= 11 && lastTwoDigits <= 13) {
+    rankCell.text(user.rank + "th");
+} else {
+    let suffix;
+    switch (lastTwoDigits % 10) {
+        case 1:
+            suffix = "st";
+            break;
+        case 2:
+            suffix = "nd";
+            break;
+        case 3:
+            suffix = "rd";
+            break;
+        default:
+            suffix = "th";
+            break;
+    }
+
+    let rankCellDiv = $("<div>");
+    rankCellDiv.attr("id", "leadersRankDiv");
+
+    let rankCellInnerDiv = $("<div>");
+    rankCellInnerDiv.attr("id", "leadersRank");
+
+    rankCellInnerDiv.text(user.rank + suffix);
+    rankCellDiv.append(rankCellInnerDiv);
+    rankCell.append(rankCellDiv);
+}
+
+newRow.append(rankCell);
 
         rankCell.addClass("rankNumber");
 

@@ -33,7 +33,7 @@
             <div id = "tMinus">T-{{remainingDaysOfMonth}}</div>
         </div>
         <div id = "challengeInfo">
-            <div id = "userStepCountContainer" class="form-group">
+            <div {{#if enableLoggedInFeatures}}{{else}} id = "userStepCountContainer2"{{/if}} class = "userStepCountContainer" class="form-group">
                 <div id = "userSteps">
                     <label id = "todaySteps" class = "challengeInfoColor" >Enter Today's Steps:</label>
                     <div id = "todayStepsDeadline">Due at 11:59PM Daily!</div>
@@ -44,18 +44,18 @@
                 {{#if enableLoggedInFeatures}}<button id = "submitTodayStepsButton" type="submit" class="btn btn-primary">Submit</button>{{else}}{{/if}}   
             </div>
             <div class = "linebreak"></div>
-            <div id = "currentStepTotalContainer">
+            <div {{#if enableLoggedInFeatures}}{{else}}id = "currentStepTotalContainer2"{{/if}} class = "currentStepTotalContainer">
                 <label id = "stepTotal" class = "challengeInfoColor">Step Total:</label>
                 <input id = "stepTotalInput" type="text" value = {{totalStepsThisMonth}} {{#if enableLoggedInFeatures}}{{else}}disabled{{/if}}>
             </div>
             <div class = "linebreak"></div>
-            <div id = "dailyStepsContainer">
-                <label id = "dailyStepsToGoal" class = "challengeInfoColor" >Daily Steps To Reach Goal:</label>
+            <div {{#if enableLoggedInFeatures}}{{else}}id = "dailyStepsContainer2"{{/if}} class = "dailyStepsContainer">
+                <label id = "dailyStepsToGoal" class = "challengeInfoColor">Daily Steps To Reach Goal:</label>
                 <input id = "stepsToGoal" class="form-input" type="text" value = {{dailyStepsToGoal}} {{#if enableLoggedInFeatures}}{{else}}disabled{{/if}}>
             </div>
             <div class = "linebreak"></div>
-            <div id = "datePickerContainer">
-                <label id = "pastSteps" class = "challengeInfoColor"{{#if enableLoggedInFeatures}}{{else}}style = "position: relative; right: 45px;"{{/if}}>Past Steps:</label>
+            <div {{#if enableLoggedInFeatures}}{{else}}id = "datePickerContainer2"{{/if}} class = "datePickerContainer">
+                <label {{#if enableLoggedInFeatures}}{{else}}id = "pastSteps"{{/if}} class = "pastSteps2 challengeInfoColor">Past Steps:</label>
                 <input id="datepicker" type="text" {{#if enableLoggedInFeatures}}{{else}} style = "position: relative; right: 90px" disabled{{/if}}>
                 {{#if enableLoggedInFeatures}}<button id = "checkPastStepsButton" type="submit" class="btn btn-primary">Check</button>{{else}}{{/if}}
             </div>
@@ -64,7 +64,7 @@
     <div id = "userProfile"{{#if enableLoggedInFeatures}}{{else}}style = "height: 500px;"{{/if}}>
         <div id="profilePicAndBackground" {{#if enableLoggedInFeatures}}{{else}}style="margin-bottom: -70px;"{{/if}}>
             <img id = "bannerWings" src = "/images/bannerWings.png" style = "background-color: {{userBackgroundColor}}">
-            <img id = "profilePicture" src = "{{profilePicture}}">
+            <img {{#if enableLoggedInFeatures}}{{else}} id = "profilePicture2"{{/if}} class = "profilePicture" src = "{{profilePicture}}">
             {{#if enableLoggedInFeatures}}
                 <div id = "colorBoard">
                     <button id = "colorOne"></button>
@@ -76,17 +76,17 @@
             {{/if}}
         </div>
         <div class = "linebreak"></div>
-        {{#if enableLoggedInFeatures}}{{else}}<div id = "friendsHeader">FRIENDS: {{friendCount}}</div>{{/if}}
+        {{#if enableLoggedInFeatures}}{{else}}<div {{#if enableLoggedInFeatures}}{{else}}id = "friendsHeader2"{{/if}}class = "friendsHeader">FRIENDS: {{friendCount}}</div>{{/if}}
         {{#if enableLoggedInFeatures}}
             {{#if anyFriendRequests}}
             {{else}}
-                <div id = "friendsHeader">FRIENDS: {{friendCount}}</div>
+                <div {{#if enableLoggedInFeatures}}{{else}}id = "friendsHeader2"{{/if}}class = "friendsHeader">FRIENDS: {{friendCount}}</div>
             {{/if}}
         {{else}}
         {{/if}}
         <div class = "linebreak"></div>
         <div id = "profileSection">
-            <form id = "profileDetails" class="form new-profile-form">
+            <form {{#if enableLoggedInFeatures}}{{else}} id = "profileDetails2"{{/if}}class = "profileDetails" class="form new-profile-form">
                 <div id = "userFullNameContainer">
                     <div id = "fullName">
                         <label id = "name">Name: </label>
@@ -121,7 +121,7 @@
         {{#if anyFriendRequests}}
         <div id = "friendsSectionContainer">
             <div id = "friendsSection">
-                <div id = "friendsHeader">FRIENDS: {{friendCount}}</div>
+                <div id = "friendsHeader" style = "position: relative; top: 0px;">FRIENDS: {{friendCount}}</div>
                     <div class = "linebreak"></div>
                     <div id = "friendRequestSection">
                         {{#if incomingFriendRequestsTable}}

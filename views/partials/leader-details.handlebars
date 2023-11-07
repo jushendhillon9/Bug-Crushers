@@ -2,19 +2,21 @@
 <tr onclick="window.location.href='profile/{{this.id}}';" style="cursor: pointer;">
     <td>
         {{#if this.numberOne}}
-        <div>
+        <div id = "placeImageDiv" class = "placePositioning">
             <img id = "placeImage" src="images/1stPlace.png">
         </div>
         {{else if this.numberTwo}}
-        <div>
+        <div id = "placeImageDiv" class = "placePositioning">
             <img id = "placeImage" src="images/2ndPlace.png">
         </div>
         {{else if this.numberThree}}
-        <div>
+        <div id = "placeImageDiv" class = "placePositioning">
             <img id = "placeImage" src="images/3rdPlace.png">
         </div>
         {{else}}
+        <div id = "leadersRankDiv" class = "placePositioning">
             <div id = "leadersRank"> {{placeFormatterLeaderPage @index 1}} </div>
+        </div>
         {{/if}}
     </td> <!--Rank-->
     <td>

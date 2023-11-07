@@ -382,11 +382,17 @@ footer {
   background:#262626;
   color:#747474;
 }
-td div {
+#rankings td {
   font-size: 25px;
   vertical-align: middle;
   margin-left: 10px;
 }
+
+#placeImage, #leadersRank {
+  position: relative;
+  left: 12px;
+}
+
 
 #rankings tr th:nth-child(1) {
   font-size: 25px;
@@ -497,7 +503,7 @@ font-size: 20px;
     cursor: pointer;
   }
   
-  #profilePicture {
+  .profilePicture {
     height: 84.5px;
     width: 84.7px;
     position: relative;
@@ -506,7 +512,19 @@ font-size: 20px;
     left: -2px;
   }
 
-  #datePickerContainer {
+  .datePickerContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    font-size: 30px;
+    width: 450px;
+    position: relative;
+    right: 35px;
+    bottom: 20px;
+    align-items: center;
+  }
+
+  #datePickerContainer2 {
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-start;
@@ -546,7 +564,7 @@ font-size: 20px;
     color: white;
   }
 
-  #friendsHeader {
+  .friendsHeader {
     color: goldenrod;
     font-size: 40px;
     text-align: center;
@@ -607,7 +625,7 @@ font-size: 20px;
     transform: rotate(45deg);
   }
   
-  #profileDetails {
+  .profileDetails {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -615,7 +633,7 @@ font-size: 20px;
     font-size: 20px;
   }
   
-  #usernameContainer, #userFullNameContainer, #userBioContainer, #userStepCountContainer, #userProfilePicContainer, #dailyStepsContainer, #datePickerContainer, #currentStepTotalContainer {
+  #usernameContainer, #userFullNameContainer, #userBioContainer, .userStepCountContainer, #userProfilePicContainer, .dailyStepsContainer, #datePickerContainer, .currentStepTotalContainer {
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-start;
@@ -623,13 +641,13 @@ font-size: 20px;
     color: white;
   }
 
-  #currentStepTotalContainer {
+  #currentStepTotalContainer2 {
     position: relative;
-    top: 15px;
-    right: 5px;
+    top:19px;
+    right: 7px;
   }
 
-  #dailyStepsContainer {
+  #dailyStepsContainer2 {
     position: relative;
     left: 12px;
     text-align: left;
@@ -649,6 +667,7 @@ font-size: 20px;
 
   #todayStepsDeadline {
     font-size: 17px;
+    margin-top: 3px;
   }
 
   #todayStepsInput {
@@ -666,12 +685,12 @@ font-size: 20px;
     left: 5px;
   }
 
-  #pastSteps {
+  .pastSteps {
     width: 450px;
     margin-right: 10px;
   }
 
-  #userStepCountContainer {
+  .userStepCountContainer {
     display: flex;
     flex-wrap: nowrap;
     position: relative;
@@ -757,6 +776,17 @@ font-size: 20px;
   #returnArrow {
     height: 90px;
     width: 90px;
+  }
+
+  #rankings tr td {
+    padding: 15px 20px !important;
+  }
+
+
+  #leadersRankDiv {
+    width: 100px;
+    position: relative;
+    left: 10px;
   }
 
   #returnButton {
@@ -1139,6 +1169,10 @@ font-size: 20px;
   }
 
   @media screen and (max-width: 750px) {
+    #leadersRankDiv {
+      width: 100px;
+      margin-right: 20px;
+    }
     #challengesSectionHeader {
       font-size: 50px;
     }
@@ -1216,7 +1250,7 @@ font-size: 20px;
     }
   }
 
-  @media screen and (max-width: 869px) {
+  @media screen and (max-width: 866px) {
     #challengeSection {
       display: flex;
       flex-wrap: wrap;
@@ -1232,16 +1266,28 @@ font-size: 20px;
       margin-bottom: -70px;
       height: 320px;
     }
-    #userStepCountContainer {
+    #userStepCountContainer2 {
       position: static;
     }
-    #currentStepTotalContainer {
+    .userStepCountContainer {
       position: static;
     }
-    #dailyStepsContainer {
+    #currentStepTotalContainer2 {
       position: static;
     }
-    #datePickerContainer {
+    .currentStepTotalContainer {
+      position: static;
+    }
+    .dailyStepsContainer {
+      position: static;
+    }
+    #dailyStepsContainer2 {
+      position: static;
+    }
+    .datePickerContainer {
+      position: static;
+    }
+    #datePickerContainer2 {
       position: static;
     }
   }
@@ -1283,9 +1329,22 @@ font-size: 20px;
       position: relative;
       bottom: 2px;
     }
+    #leadersRankDiv {
+      position: relative;
+      right: 50px;
+      font-size: 20px !important;
+    }
+    #leadersRank {
+      position: relative;
+      right: 50px;
+      font-size: 30px !important;
+    }
   }
 
   @media screen and (max-width: 800px){
+    .rankPositioning {
+      margin-right: 50px;
+    }
     #topTenHeader {
       font-size: 20px;
       margin-left: 0px;
@@ -1340,19 +1399,12 @@ font-size: 20px;
       position: relative;
       left: 20px;
     }
-    #placeImage {
-      position: relative;
-      left: 10px;
-    }
     #leadersSteps {
       font-size: 20px !important;
     }
     
     #leadersUsername {
       font-size: 15px !important;
-    }
-    #rankings tr td {
-      padding: 10px;
     }
   }
 
@@ -1401,18 +1453,15 @@ font-size: 20px;
     }
     #leadersRank {
       font-size: 20px !important;
-      position: relative;
-      left: 12px;
+      margin-right: 20px;
+      text-align: center;
     }
     #placeImage {
       width: 35px;
       height: 35px;
     }
     #rankings tr td:nth-child(2) {
-      font-size: 12px !important;
-    }
-    #rankings tr td {
-      padding: 15px;
+      font-size: 10px !important;
     }
     #steps {
       margin-top: 2px;
@@ -1451,31 +1500,46 @@ font-size: 20px;
     #tMinus {
       font-size:30px;
     }
-    #userStepCountContainer, #currentStepTotalContainer, #dailyStepsContainer, #datePickerContainer{
+    .userStepCountContainer, .currentStepTotalContainer, .dailyStepsContainer, .datePickerContainer{
+      font-size: 20px;
+    }
+    #userStepCountContainer2 {
       font-size: 20px;
     }
     #todayStepsDeadline {
       font-size: 12px;
     }
+    #dailyStepsContainer2 {
+      font-size: 18px;
+    }
+    #datePickerContainer2 {
+      font-size: 20px;
+    }
     #todayStepsInput, #stepTotalInput, #datepicker, #stepsToGoal {
       width: 150px;
     }
-    #userStepCountContainer {
+    .userStepCountContainer {
       width: 450px;
       display: flex;
     }
-    #currentStepTotalContainer {
+    .userStepCountContainer2 {
+      width: 450px;
+      display: flex;
+    }
+    
+    .currentStepTotalContainer {
       width: 300px;
     }
-    #datePickerContainer {
+    #currentStepTotalContainer2 {
+      width: 300px;
+    }
+    .datePickerContainer {
       width: 300px;
     }
     #dailyStepsToGoal {
       width: 150px;
     }
-    #pastSteps {
-      margin-right: 20px;
-    }
+    
     #checkPastStepsButton {
       margin-left: 10px;
     }
@@ -1510,14 +1574,26 @@ font-size: 20px;
     #profilePicAndBackground {
       justify-content: center;
     }
-    #profilePicture {
+    .profilePicture {
       position: relative;
       right: 50px;
       left: -2px;
     }
   }
 
-  @media screen and (max-width: 415px){
+  @media screen and (max-width: 425px){
+    #friendsHeader2 {
+      position: relative;
+      bottom: 155px;
+      color: goldenrod;
+      font-size: 40px;
+      text-align: center;
+      margin: 10px;
+    }
+   #profileDetails2 {
+    position: relative;
+    top: 30px;
+   }
     html, body {
       overflow-x: hidden;
       margin: 0;
@@ -1535,6 +1611,9 @@ font-size: 20px;
     }
     #takeSomeSteps {
       margin-left: -30px;
+    }
+    #leadersSteps {
+      font-size: 5px !important;
     }
     .container-wrap2 {
       width: 90%;
@@ -1585,18 +1664,19 @@ font-size: 20px;
     #placeImage {
       width: 30px;
       height: 30px;
+      display: flex;
     }
     #leadersUsername {
       font-size: 10px !important;
     }
     #leadersSteps {
-      font-size: 15px !important;
+      font-size: 12px !important;
     }
     #steps {
       width: 20px;
       height: 20px;
     }
-    #friendsHeader {
+    .friendsHeader {
       position: relative;
       bottom: 180px;
       font-size: 30px !important;
@@ -1633,7 +1713,10 @@ font-size: 20px;
     circle {
       stroke-width: 13px;
     }
-    #userStepCountContainer, #currentStepTotalContainer, #dailyStepsContainer, #datePickerContainer{
+    .userStepCountContainer, .currentStepTotalContainer, #dailyStepsContainer, #datePickerContainer{
+      font-size: 18px;
+    }
+    #currentStepTotalContainer2 {
       font-size: 18px;
     }
     #todayStepsDeadline {
@@ -1643,28 +1726,39 @@ font-size: 20px;
       width: 120px;
       height: 40px;
     }
-    #userStepCountContainer {
+    .userStepCountContainer {
       width: 400px;
+      display: flex;
+    }
+    #userStepCountContainer2 {
+      width: 300px;
       display: flex;
     }
     #submitTodayStepsButton {
       margin-bottom: 5px;
     }
-    #currentStepTotalContainer {
+    .currentStepTotalContainer {
       width: 250px;
     }
-    #datePickerContainer {
-      width: 250px;
+    .datePickerContainer {
+      margin-left: 180px;
+    }
+    #datePickerContainer2 {
+      justify-content: center;
+      width: auto;
     }
     #dailyStepsToGoal {
       width: 150px;
       width: 120px;
     }
     #pastSteps {
-      margin-right: 20px;
+      position: relative;
+      right: 110px;
     }
     #checkPastStepsButton {
       margin-left: 10px;
+      width: 90px;
+      height: 30px;
     }
     #stepTotal {
       width: 110px;
@@ -1728,18 +1822,21 @@ font-size: 20px;
       justify-content: center;
       width: 262.5px;
     }
-    #profilePicture {
+    .profilePicture {
       height: 62px;
       width: 62px;
       position: relative;
       left: -1px;
       bottom: 107px;
     }
+    #profilePicture2 {
+      position: relative;
+      bottom: 118.6px;
+    }
     #friendsSection {
       width: 310px;
-      height: 98px;
     }
-    #friendsHeader {
+    .friendsHeader {
       font-size: 20px;
     }
     #friendRequestHeader {
@@ -1808,9 +1905,120 @@ font-size: 20px;
     #usernameRegisterField {
       font-size: 12px;
     }
+    #placeImageDiv {
+      width: 60px;
+      display: flex;
+      justify-content: flex-start;
+    }
+    .placePositioning {
+      position: relative;
+      right:0px;
+    }
+    .rankPositioning {
+      margin-right: 50px;
+    }
+    #leadersRank {
+      font-size: 14px !important;
+      text-align: right;
+      position: relative;
+      left: -0.1px;
+    }
+    #leadersRankDiv {
+      width: 10px;
+      position: relative;
+      right: 30px;
+      margin-right: 30px;
+      width: 20px;
+    }
+    #rankings td:nth-child(1) {
+      padding: 15px 15px !important;
+    }
+    #placeImageDiv {
+      width: 60px;
+      display: flex;
+      justify-content: flex-start;
+    }
+    #leadersSteps {
+      font-size: 14px !important;
+      padding: 1px 3px;
+    }
+    .placePositioning {
+      position: relative;
+      right:7px;
+    }
+    #rankings th {
+      padding: 12px;
+      padding-top: 40px;
+    }
+    #placeImageDiv2 {
+      width: 60px;
+      display: flex;
+      justify-content: flex-start;
+      position: relative;
+      right: 7px;
+    }
   }
 
   @media screen and (max-width: 375px) {
+    #rankings th:nth-child(2) {
+      position: relative;
+      left: -15px;
+    }
+    #leadersUsername {
+      font-size: 10px !important;
+      position: relative;
+      left: -20px;
+      width: 20px;
+    }
+    #rankings {
+      margin-left: 10px;
+    }
+    #rankings th {
+      padding: 12px;
+      padding-top: 40px;
+    }
+    .placePositioning {
+      position: relative;
+      right:7px;
+    }
+    .placePositioning2 {
+      position: relative;
+      right:13px;
+    }
+    .rankPositioning {
+      margin-right: 50px;
+    }
+    #leadersRank {
+      font-size: 12px !important;
+    }
+    #leadersRankDiv {
+      width: 30px;
+      margin-right: 30px;
+    }
+    #rankings td:nth-child(1) {
+      padding: 15px 15px !important;
+    }
+    #placeImageDiv {
+      width: 60px;
+      display: flex;
+      justify-content: flex-start;
+    }
+    #placeImageDiv2 {
+      width: 60px;
+      display: flex;
+      justify-content: flex-start;
+      position: relative;
+      right: 7px;
+    }
+    #leadersSteps {
+      font-size: 12px !important;
+    }
+    #steps {
+      height: 12px;
+      width: 12px;
+      position: relative;
+      bottom: 0px;
+    }
     #rankings {
       position: relative;
       right: 10px;
@@ -1855,5 +2063,78 @@ font-size: 20px;
     }
     #usernameRegisterField {
       font-size: 17px;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    #usernameHeader {
+      font-size: 32px;
+    }
+    #challengeHeader {
+      font-size: 24px;
+    }
+    #challengeIconHeader {
+      font-size: 18px;
+    }
+    .profileDetails {
+      position: relative;
+      right: 19px;
+    }
+    #todayStepsInput, #stepsToGoal, #datepicker, #stepTotalInput {
+      width: 110px;
+      height: 35px;
+    }
+    #submitTodayStepsButton, #checkPastStepsButton {
+      width: 50px;
+      height: 20px;
+      font-size: 8px;
+      text-align: center;
+    }
+    #todaySteps{
+      font-size: 14px;
+      width: 100px;
+      margin-right: -30px;
+    }
+    #stepTotal {
+      font-size: 14px;
+      margin-right: -15px;
+    }
+    #todayStepsDeadline {
+      font-size: 9px;
+      margin-right: -25px;
+    }
+    #dailyStepsToGoal {
+      font-size: 14px;
+      margin-right: -7px;
+    }
+    #userSteps {
+      margin-right: 40px;
+      width: 120px;
+    }
+    .userStepCountContainer {
+      margin-right: -70px;
+    }
+    .datePickerContainer {
+      font-size: 14px;
+      margin-left: 30px;
+    }
+    #datePickerContainer2 {
+      margin-right: -170px;
+    }
+    .pastSteps2 {
+      margin-right: 15px;
+    }
+    #updateButton {
+      margin-top: 10px;
+    }
+    #takeSomeSteps {
+      font-size: 11px;
+      margin-left: -10px;
+      right: 10px;
+      left: 0px;
+    }
+    #pastSteps {
+      font-size: 14px;
+      margin-right: -9px;
     }
   }
