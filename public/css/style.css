@@ -1339,6 +1339,19 @@ font-size: 20px;
       right: 50px;
       font-size: 30px !important;
     }
+    #leadersRank {
+      font-size: 19px !important;
+      text-align: right;
+      position: relative;
+      left: 10px;
+    }
+    #leadersRankDiv {
+      width: 10px;
+      position: relative;
+      right: 40px;
+      margin-right: 30px;
+      width: 20px;
+    }
   }
 
   @media screen and (max-width: 800px){
@@ -1487,6 +1500,19 @@ font-size: 20px;
     }
   }
   @media screen and (max-width: 580px) {
+    #leadersRank {
+      font-size: 14px !important;
+      text-align: right;
+      position: relative;
+      left: 10px;
+    }
+    #leadersRankDiv {
+      width: 10px;
+      position: relative;
+      right: 40px;
+      margin-right: 30px;
+      width: 20px;
+    }
     #usernameHeader {
       font-size: 40px;
       text-align: center;
