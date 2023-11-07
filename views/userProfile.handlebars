@@ -121,7 +121,7 @@
         {{#if anyFriendRequests}}
         <div id = "friendsSectionContainer">
             <div id = "friendsSection">
-                <div id = "friendsHeader" style = "position: relative; top: 0px;">FRIENDS: {{friendCount}}</div>
+                <div {{#if enableLoggedInFeatures}}{{else}}id = "friendsHeader2"{{/if}}class = "friendsHeader">FRIENDS: {{friendCount}}</div>
                     <div class = "linebreak"></div>
                     <div id = "friendRequestSection">
                         {{#if incomingFriendRequestsTable}}
