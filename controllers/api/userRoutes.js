@@ -2,6 +2,7 @@ const router = require('express').Router(); // imports the Express.js router mod
 const cron = require('node-cron');
 const moment = require('moment-timezone');
 const dayjs = require("dayjs");
+const sequelize = require("../../config/connection")
 const { User, UserProfile, UserConnection, UserSteps } = require('../../models'); // imports the User model for working with user data
 
 const timezone = 'America/Los_Angeles';
@@ -51,7 +52,7 @@ cron.schedule("35 13 * * *", async () => {
 
 //will grab every "currentSteps" for each UserProfile and log it as each User's steps for the day
 //it sets the current_steps (for the day) equal to 0 afterwards and it will stay 0 until the route above autogenerates a stepcount
-cron.schedule("40 13 * * *", async () => {
+cron.schedule("37 13 * * *", async () => {
   try {
     await sequelize.transaction(async (t) => {
       let currentTime = dayjs().unix();
