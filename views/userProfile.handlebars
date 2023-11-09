@@ -36,7 +36,7 @@
             <div {{#if enableLoggedInFeatures}}{{else}} id = "userStepCountContainer2"{{/if}} class = "userStepCountContainer" class="form-group">
                 <div id = "userSteps">
                     <label id = "todaySteps" class = "challengeInfoColor" >Enter Today's Steps:</label>
-                    <div id = "todayStepsDeadline">Due at 11:59PM Daily!</div>
+                    <div id = "todayStepsDeadline">Due at 11:59PM (P.S.T.) Daily!</div>
                 </div>
                 <div>
                     <input id="todayStepsInput" class="form-input todays_steps" type="text" name="todays_steps" value={{current_steps}} {{#if enableLoggedInFeatures}}{{else}}disabled{{/if}}>
