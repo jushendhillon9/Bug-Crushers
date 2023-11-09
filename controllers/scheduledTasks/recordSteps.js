@@ -1,0 +1,1 @@
+console.log("recordSteps is being ran by Heroku Scheduler");
