@@ -20,8 +20,9 @@
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
     "express-session": "^1.17.1",
+    "moment-timezone": "^0.5.43",
     "mysql2": "^2.3.3",
-    "node-cron": "^3.0.2",
+    "node-cron": "^3.0.3",
     "passport": "^0.4.1",
     "sequelize": "^6.33.0"
   }
