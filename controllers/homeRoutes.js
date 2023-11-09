@@ -125,18 +125,18 @@ router.get("/leaders", async (req, res) => {
 
       let thisMonth = dayjs().format("MM/YYYY");
       for (const leader of leaders) {
+        let totalSteps = 0;
         if (leader.UserSteps.length == 0) {
           leader.totalSteps = 0;
         }
         for (const stepEntry of leader.UserSteps) {
           let stepEntryDate = stepEntry.date;
           stepEntryDate = dayjs.unix(stepEntryDate).format("MM/YYYY"); //format date created as MM/YYYY
-          let totalSteps = 0;
           if (thisMonth == stepEntryDate) {
             totalSteps += stepEntry.steps_for_day;
           }
-          console.log(stepEntryDate);
           leader.totalSteps = totalSteps;
+          console.log(leader.totalSteps);
         }
       }
       leaders.sort((a, b) => {
