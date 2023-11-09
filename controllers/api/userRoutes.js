@@ -40,7 +40,7 @@ cron.schedule("0 19 * * *", async (req,res) => {
 
 //will grab every "currentSteps" for each UserProfile and log it as each User's steps for the day
 //it sets the current_steps (for the day) equal to 0 afterwards and it will stay 0 until the route above autogenerates a stepcount
-cron.schedule("50 12 * * *", async () => {
+cron.schedule("55 12 * * *", async () => {
   //need to require dayjs for the date
   let currentTime = dayjs().unix();
   let allUsersProfilesDB = await UserProfile.findAll();
