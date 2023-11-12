@@ -1,10 +1,11 @@
 const sequelize = require("../../config/connection");
+const dayjs = require("dayjs");
 const { UserProfile, UserSteps } = require('../../models'); // imports the User model for working with user data
 
 let recordSteps = async () => {
     try {
       await sequelize.transaction(async (t) => {
-        let currentTime = dayjs().unix();
+      let currentTime = dayjs().unix();
       let allUsersProfilesDB = await UserProfile.findAll();
       let allUserProfiles = allUsersProfilesDB.map((profile) => profile.get({plain: true}));
       console.log(allUserProfiles); //all userProfiles
