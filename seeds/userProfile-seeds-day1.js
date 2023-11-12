@@ -6,7 +6,7 @@ const userprofiledata = [
         bio: "Hey. I am Josh Jacobs and I love to walk.",
         profile_picture: "https://miro.medium.com/v2/resize:fit:960/0*mQDq7K37Lnh-066J.jpg",
         challenge: "Challenge One",
-        current_steps: 108000,
+        current_steps: 101000,
         user_id: 1
     },
     {
@@ -38,7 +38,7 @@ const userprofiledata = [
         bio:  "What's up? I'm John Skywalker, stepping into a world of wellness. Let's make every step count and crush our fitness goals! 💪 #StepStrong",
         profile_picture: "https://randomwordgenerator.com/img/picture-generator/chair-1840011_640.jpg",
         challenge: "Challenge One",
-        current_steps: 108000,
+        current_steps: 110000,
         user_id: 5
     },
     {
@@ -62,7 +62,7 @@ const userprofiledata = [
         bio: "Yo, I'm Ian Walking, turning pavement into my personal gym. Step by step, I'm sculpting a stronger me. Join the fitness party! 💪 #StepSculptor",
         profile_picture: "https://sm.ign.com/ign_nordic/review/l/lost-in-ra/lost-in-random-review_9hhv.jpg",
         challenge: "Challenge One",
-        current_steps: 108000,
+        current_steps: 10000,
         user_id: 8
     },
     {
@@ -94,7 +94,7 @@ const userprofiledata = [
         bio: "Hey! I am Willow Quinn and I love to walk.",
         profile_picture: "https://i.pinimg.com/736x/a1/c2/be/a1c2be6c013cb288221cd1675021dbd8.jpg",
         challenge: "Challenge One",
-        current_steps: 108000,
+        current_steps: 101000,
         user_id: 12
     },
     {
@@ -110,7 +110,7 @@ const userprofiledata = [
         bio: "Greetings, I'm Silas Orion, trekking through the terrain of fitness. Every step is a victory, and I'm building an empire of well-being. Join my kingdom! 👑 #StepConqueror",
         profile_picture: "https://conetix.com.au/wp-content/uploads/2023/05/dns-prsd-attack-cover.png",
         challenge: "Challenge One",
-        current_steps: 108000,
+        current_steps: 99000,
         user_id: 14
     },
     {
@@ -118,7 +118,7 @@ const userprofiledata = [
         bio: "Hey there, it's Dwyane Johnson, scripting a tale of strength and vitality. Join my story, and let's write a bestseller of well-being! 📚 #StepAuthor",
         profile_picture: "https://machinelearningmastery.com/wp-content/uploads/2018/07/thomas-lipke-oIuDXlOJSiE-unsplash-scaled.jpg",
         challenge: "Challenge One",
-        tep_count: 108000,
+        tep_count: 97000,
         user_id: 15
     },
     {
@@ -158,7 +158,7 @@ const userprofiledata = [
         bio: "What's up? I'm Mason Walker, building the fortress of fitness brick by brick. Join my construction crew, and let's erect a stronghold of health! 🏰 #StepBuilder",
         profile_picture: "https://images4.fanpop.com/image/photos/22900000/So-Cool-random-22921826-500-333.jpg",
         challenge: "Challenge One",
-        current_steps: 108000,
+        current_steps: 104500,
         user_id: 20
     },
     {
@@ -190,7 +190,7 @@ const userprofiledata = [
         profile_picture: "https://media.istockphoto.com/id/1392898737/vector/abstract-horizontal-background-with-colorful-waves.jpg?s=612x612&w=0&k=20&c=xxRagBOWElqfzxPho893QoNmB1HnAw9VM-UHkQhtih4=",
         bio: "Hey! Clark Williams here, and I love to walk more than anything else. It keeps my mind clear and is the best way to recenter yourself. Walking is the best!",
         challenge: "Challenge One",
-        current_steps: 108000,
+        current_steps: 105500,
         user_id: 24
     },
     {
