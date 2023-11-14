@@ -76,7 +76,6 @@ colorBoard.on("click", (event) => {
     }
 })
 
-
 updateButton.on("click", () => {
     full_name = $(".full_name").val();
 
