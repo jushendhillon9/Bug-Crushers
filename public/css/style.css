@@ -659,6 +659,22 @@ font-size: 20px;
     text-align: left;
   }
 
+  #passwordContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .eyeIcon {
+    background-color: white;
+    border-radius: 40%;
+    width: 25px;
+    height: 25px;
+    margin-left: 15px;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+
   #profileSection {
     width: 100%;
   }
@@ -1630,6 +1646,10 @@ font-size: 20px;
   }
 
   @media screen and (max-width: 425px){
+    .eyeIcon {
+      width: 21px;
+      height: 21px;
+    }
     #friendsHeader2 {
       position: relative;
       bottom: 155px;
@@ -2180,5 +2200,9 @@ font-size: 20px;
       margin-left: -10px;
       right: 10px;
       left: 0px;
+    }
+    .eyeIcon {
+      width: 17px;
+      height: 17px;
     }
   }

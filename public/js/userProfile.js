@@ -248,7 +248,7 @@ $("body").on("click", ".declineButton", async (event) => {
     location.reload(true);
 })
 
-$(window).on("load", async () => {
+let loadCircularProgressBar = async () => {
     let currentPath = window.location.pathname;
     currentPath = currentPath.substring(9);
     let fetchPath = "/api/users/circularProgressBar/" + currentPath;
@@ -290,7 +290,9 @@ $(window).on("load", async () => {
         keyFramesRule.deleteRule("100%");
         keyFramesRule.appendRule(`100%{stroke-dashoffset: ${amountToOffset};}`)
     }
-})
+}
+
+$(window).on("load", setTimeout(loadCircularProgressBar, 1000))
 
 
 let countThree = 0;

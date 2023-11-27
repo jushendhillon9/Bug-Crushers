@@ -63,3 +63,25 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
 });
 
+function togglePasswordMasking(eyeIconIndex) {
+  console.log("HITTT");
+  let passwordInputs = document.querySelectorAll(".togglingAvailable");
+  let eyeIcons = document.querySelectorAll(".eyeIcon");
+
+  let passwordInput = passwordInputs[eyeIconIndex];
+
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    eyeIcons[eyeIconIndex].setAttribute("name", "eye-outline");
+  } else {
+    passwordInput.type = "password";
+    eyeIcons[eyeIconIndex].setAttribute("name", "eye-off-outline");
+  }
+}
+
+
+
+
+$('.eyeIcon').on("click", () => {
+  togglePasswordMasking();
+});
