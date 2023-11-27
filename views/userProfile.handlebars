@@ -34,7 +34,7 @@
         </div>
         <div id = "challengeInfo">
             <div {{#if enableLoggedInFeatures}}{{else}} id = "userStepCountContainer2"{{/if}} class = "userStepCountContainer" class="form-group">
-                <div id = "userSteps">
+                <div {{#if enableLoggedInFeatures}}id = "userSteps2" {{else}}{{/if}}class = "userSteps">
                     <label id = "todaySteps" class = "challengeInfoColor" >Enter Today's Steps:</label>
                     <div id = "todayStepsDeadline">Due at 11:59PM (P.S.T.) Daily!</div>
                 </div>
@@ -93,7 +93,7 @@
                         <div class = "linebreak"></div>
                         <div id = "maxLength">Max Length: 50 Characaters</div>
                     </div>
-                    <input maxlength="50" class="form-input full_name" type="text" name="name" value = "{{fullName}}" {{#if enableLoggedInFeatures}}{{else}}disabled{{/if}}>
+                    <input id = "inputFullName" maxlength="50" class="form-input full_name" type="text" name="name" value = "{{fullName}}" {{#if enableLoggedInFeatures}}{{else}}disabled{{/if}}>
                 </div>
                 <div id = "userBioContainer">
                     <div id = "userBio">
@@ -107,7 +107,7 @@
                 </div>
                 <div id = "userProfilePicContainer">
                     <label for="image">Profile Image (enter as URL):</label>
-                    <input class="form-input profile_picture" type="Url" id="image" name="image" value="{{profilePicture}}" pattern="https://.*" size="10"/ {{#if enableLoggedInFeatures}}{{else}}disabled{{/if}}>
+                    <input id="imageInput" class="form-input profile_picture" type="Url" name="image" value="{{profilePicture}}" pattern="https://.*" size="10"/ {{#if enableLoggedInFeatures}}{{else}}disabled{{/if}}>
                 </div>
                 {{#if enableLoggedInFeatures}}
                     <div>

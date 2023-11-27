@@ -1604,7 +1604,7 @@ font-size: 20px;
     #todaySteps {
       width: 150px;
     }
-    #userSteps {
+    .userSteps {
       width: 150px;
       margin-right: 40px;
     } 
@@ -1646,6 +1646,13 @@ font-size: 20px;
   }
 
   @media screen and (max-width: 425px){
+    #inputFullName, #bioInput, #imageInput {
+      font-size: 0.75rem;
+    }
+    #todayStepsInput {
+      position: relative;
+      left: 5px;
+    }
     .eyeIcon {
       width: 21px;
       height: 21px;
@@ -1800,7 +1807,6 @@ font-size: 20px;
     }
     #userStepCountContainer2 {
       width: 300px;
-      display: flex;
     }
     #submitTodayStepsButton {
       margin-bottom: 5px;
@@ -1808,20 +1814,16 @@ font-size: 20px;
     .currentStepTotalContainer {
       width: 250px;
     }
-    .datePickerContainer {
-      margin-left: 180px;
-    }
     #datePickerContainer2 {
       justify-content: center;
       width: auto;
+      position: relative;
+      left: 50px;
+      top: 0px;
     }
     #dailyStepsToGoal {
       width: 150px;
       width: 120px;
-    }
-    #pastSteps {
-      position: relative;
-      right: 110px;
     }
     #checkPastStepsButton {
       margin-left: 10px;
@@ -1834,7 +1836,7 @@ font-size: 20px;
     #todaySteps {
       width: 150px;
     }
-    #userSteps {
+    .userSteps {
       width: 150px;
       margin-right: 30px;
     } 
@@ -2028,6 +2030,13 @@ font-size: 20px;
   }
 
   @media screen and (max-width: 375px) {
+    .userSteps {
+      position: relative;
+      left: 13px;
+    }
+    #todayStepsDeadline {
+      font-size: 9px;
+    }
     #rankings th:nth-child(2) {
       position: relative;
       left: -15px;
@@ -2132,9 +2141,20 @@ font-size: 20px;
     #usernameRegisterField {
       font-size: 17px;
     }
+    #userStepCountContainer2 {
+      margin-right: -10px;
+    }
+    #userSteps2 {
+      position: relative;
+      right: 50px;
+    }
   }
 
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 340px) {
+    #userSteps2 {
+      position: relative;
+      left: -5px;
+    }
     #usernameHeader {
       font-size: 32px;
     }
@@ -2175,19 +2195,21 @@ font-size: 20px;
       font-size: 14px;
       margin-right: -7px;
     }
-    #userSteps {
+    .userSteps {
       margin-right: 40px;
       width: 120px;
     }
     .userStepCountContainer {
       margin-right: -70px;
     }
+    .userSteps {
+      position: relative;
+      right: 0px;
+      left: -10px;
+    }
     .datePickerContainer {
       font-size: 14px;
       margin-left: 30px;
-    }
-    #datePickerContainer2 {
-      margin-right: -170px;
     }
     .pastSteps2 {
       margin-right: 15px;
@@ -2204,5 +2226,15 @@ font-size: 20px;
     .eyeIcon {
       width: 17px;
       height: 17px;
+    }
+    #pastSteps {
+      font-size: 14px !important;
+    }
+    #datePickerContainer2 {
+      justify-content: center;
+      width: auto;
+      position: relative;
+      left: 20px;
+      top: 0px;
     }
   }
