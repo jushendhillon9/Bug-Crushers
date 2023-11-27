@@ -64,7 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function togglePasswordMasking(eyeIconIndex) {
-  console.log("HITTT");
   let passwordInputs = document.querySelectorAll(".togglingAvailable");
   let eyeIcons = document.querySelectorAll(".eyeIcon");
 
