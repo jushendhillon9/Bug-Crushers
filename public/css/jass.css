@@ -1809,7 +1809,21 @@ form [type='radio'] {
       margin-left: -20px;
       position: relative;
       bottom: 20px;
-      left: 15px;
+      left: -10px;
+    }
+  }
+
+  @media screen and (max-width: 340px) {
+    #takeSomeSteps {
+      margin-left: -20px;
+      position: relative;
+      bottom: 15px;
+      left: -15px;
+    }
+    #menuitems {
+      font-size: 9px;
+      position: relative;
+      top: -5px;
     }
   }
 
