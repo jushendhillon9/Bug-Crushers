@@ -292,7 +292,7 @@ let loadCircularProgressBar = async () => {
     }
 }
 
-$(window).on("load", setTimeout(loadCircularProgressBar, 1000))
+$(window).on("load", loadCircularProgressBar)
 
 
 let countThree = 0;

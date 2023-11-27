@@ -1069,7 +1069,7 @@ font-size: 20px;
     stroke-width: 20px;
     stroke-dasharray: 1030;
     stroke-dashoffset: 1030;
-    animation: anim 1.5s linear forwards;
+    animation: anim 2.5s linear forwards;
   }
 
   #svgCircle {
