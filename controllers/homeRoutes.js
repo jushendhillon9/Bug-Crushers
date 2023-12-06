@@ -136,7 +136,6 @@ router.get("/leaders", async (req, res) => {
             totalSteps += stepEntry.steps_for_day;
           }
           leader.totalSteps = totalSteps;
-          console.log(leader.totalSteps);
         }
       }
       leaders.sort((a, b) => {
@@ -288,7 +287,6 @@ router.get("/profile/:userid", async (req, res) => {
       fullName = profile[0].UserProfile.full_name;
       bio = profile[0].UserProfile.bio;
       current_steps = profile[0].UserProfile.current_steps;
-      console.log(profile[0].UserProfile);
       userBackgroundColor = profile[0].UserProfile.user_background_color;
       parseInt(current_steps);
       current_steps= current_steps.toLocaleString();
@@ -388,7 +386,7 @@ router.get("/profile/:userid", async (req, res) => {
         stepEntryDate = dayjs.unix(stepEntryDate).format("MM/YYYY"); //format date created as MM/YYYY
         let totalSteps = 0;
         if (thisMonth == stepEntryDate) {
-          totalSteps += user.steps_for_day;
+          totalSteps += stepEntry.steps_for_day;
         }
         user.totalSteps = totalSteps;
       }

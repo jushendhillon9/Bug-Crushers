@@ -45,7 +45,6 @@ router.post('/login', async (req, res) => {
     }
     // checks if the provided password matches the stored password for the user
     const validPassword = await userData.checkPassword(req.body.password);
-    console.log(validPassword);
     //returning false even when correct
 
     // if the password is not valid
@@ -56,13 +55,10 @@ router.post('/login', async (req, res) => {
       return; // exits function
     }
 
-    console.log("CORRECT");
-
     // saves user information in a session to indicate the user is now logged in
     await req.session.save(() => {
       req.session.user_id = userData.id; // stores the user's ID in the session
       req.session.logged_in = true; // sets the 'logged_in' property to true
-      console.log(req.session.logged_in);
       
       // responds with the user's data and a success message
       res.json({ user: { id: userData.id, email: userData.email }, message: 'You are now logged in!' });
@@ -126,7 +122,6 @@ router.get('/logout', (req, res) => {
     // if logged in, destroys the session to log the user out
     req.session.destroy((err) => {
       if (err) {
-        console.log("shouldn't be here");
         console.log (err);
         res.status(500).json({error: "error occured"})
       }
@@ -157,7 +152,6 @@ router.put("/dailySteps", async (req,res) => {
         }
       }
     )
-    console.log(userProfile);
     res.json({user: userProfile});
   }
   catch(err) {
@@ -211,21 +205,24 @@ router.post("/pastSteps", async (req,res) => {
 
 router.get("/friendRequest", async (req, res) => {
   try {
-    const allFriendRequestsDBData = await UserConnection.findAll(
-      {
-        where: {
-          user_id_2: req.session.user_id,
-          status: "pending",
-        },
-        include: {
-          model: User
-        }
-      }
-    )
-
-    const allFriendRequestData = await allFriendRequestsDBData.map((friendRequest) => friendRequest.get({ plain: true }));
+    let allFriendRequestsDBData = [];
+    let allFriendRequestData = [];
     let friendRequesterProfilePics = [];
     let userProfilePics = [];
+    if (req.session.user_id) {
+      allFriendRequestsDBData = await UserConnection.findAll(
+        {
+          where: {
+            user_id_2: req.session.user_id,
+            status: "pending",
+          },
+          include: {
+            model: User
+          }
+        }
+      );
+      }
+    allFriendRequestData = await allFriendRequestsDBData.map((friendRequest) => friendRequest.get({ plain: true }));
 
     for (const request of allFriendRequestData) {
       const UserProfileData = await UserProfile.findAll({
@@ -240,7 +237,6 @@ router.get("/friendRequest", async (req, res) => {
     }
     
 
-    console.log(userProfilePics);
     res.json({allFriendRequestData, userProfilePics});
   }
   catch(error) {
@@ -258,7 +254,6 @@ router.post("/addFriend", async (req,res) => {
       "user_id_1": friendInitiatior,
       "user_id_2": friendReceiver
     })
-    console.log(newConnection);
     res.json({newConnection});
   }
   catch(err) {
@@ -282,7 +277,6 @@ router.post("/acceptFriend", async (req,res) => {
     )
     const matchingUser = matchingUserDB.map((user) => user.get({plain: true}));
     let requesterID = matchingUser[0].id;
-    console.log(requesterID);
     await UserConnection.update(
       {
         status: "accepted",
@@ -315,7 +309,6 @@ router.delete("/declineFriend", async (req,res) => {
     )
     const matchingUser = matchingUserDB.map((user) => user.get({plain: true}));
     let requesterID = matchingUser[0].id;
-    console.log(requesterID);
     await UserConnection.destroy(
       {
         where: {
