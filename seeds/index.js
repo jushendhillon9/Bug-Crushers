@@ -2,7 +2,6 @@ const sequelize = require("../config/connection");
 const seedUsers = require("./user-seeds")
 const seedUserProfilesDayOne = require("./userProfile-seeds-day1");
 const seedUserConnections = require("./UserConnection-seeds");
-const seedUserSteps = require("./userSteps-seeds")
 
 const seedAllDayOne = async () => {
     try {
@@ -16,9 +15,6 @@ const seedAllDayOne = async () => {
 
         await seedUserConnections();
         console.log('User connections seeded successfully');
-
-        await seedUserSteps();
-        console.log('User Steps seeded successfully');
         process.exit(0);
     } 
     catch (error) {

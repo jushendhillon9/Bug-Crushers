@@ -8,16 +8,14 @@ let recordSteps = async () => {
       let currentTime = dayjs().unix();
       let allUsersProfilesDB = await UserProfile.findAll();
       let allUserProfiles = allUsersProfilesDB.map((profile) => profile.get({plain: true}));
-      console.log(allUserProfiles); //all userProfiles
+      console.log(allUserProfiles);
       let allUsersStepInfo = [];
-      for (const userProfile of allUserProfiles) {
+      for (let i = 0; i < 25; i++) {
         let usersSteps = {
-          daysSteps: userProfile.current_steps,
-          userID: userProfile.id,
+          daysSteps: allUserProfiles[i].current_steps,
+          userID: allUserProfiles[i].id,
         }
         allUsersStepInfo.push(usersSteps);
-        //now I need to go into the database and set each UserProfile's current steps equal to 0, since it is a new day now
-        //each usersSteps holds the current UserProfile's id, use this to locate that specific UserProfile and change current_steps to 0
         await UserProfile.update(
           {
             current_steps: 0,
